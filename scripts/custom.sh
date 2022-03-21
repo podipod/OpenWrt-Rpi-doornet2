@@ -13,7 +13,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/boot/uboot-rockchip pa
 rm -rf target/linux/rockchip
 svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/rockchip target/linux/rockchip
 sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
-
+rm -rf package/feeds/packages/asu/Makefile
 # Mod zzz-default-settings
 pushd package/emortal/default-settings/files
 sed -i '/http/d' zzz-default-settings
