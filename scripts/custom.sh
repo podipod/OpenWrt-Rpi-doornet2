@@ -8,10 +8,7 @@
 # Modify default IP
 
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
-rm -rf package/boot/uboot-rockchip
-svn co https://github.com/coolsnowwolf/lede/trunk/package/boot/uboot-rockchip package/boot/uboot-rockchip
-rm -rf target/linux/rockchip
-svn co https://github.com/coolsnowwolf/lede/trunk/target/linux/rockchip target/linux/rockchip
+
 # Mod zzz-default-settings
 pushd package/emortal/default-settings/files
 sed -i '/http/d' zzz-default-settings
