@@ -8,10 +8,6 @@
 # Modify default IP
 
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
-rm -rf target/linux/rockchip/patches-5.4
-svn co https://github.com/LPDDR6-10000MHz/immortalwrt-DoorNET2/trunk/target/linux/rockchip/patches-5.4 target/linux/rockchip/patches-5.4
-rm -rf package/boot/uboot-rockchip
-svn co https://github.com/LPDDR6-10000MHz/immortalwrt-DoorNET2/trunk/package/boot/uboot-rockchip
 # Mod zzz-default-settings
 pushd package/emortal/default-settings/files
 sed -i '/http/d' zzz-default-settings
